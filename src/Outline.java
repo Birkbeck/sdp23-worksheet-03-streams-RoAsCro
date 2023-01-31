@@ -64,7 +64,10 @@ public class Outline {
   public static void question4() {
     List<String> words = getList();
     System.out.println("4:");
-    // YOUR CODE
+    List<String> exclamatory = words.stream().map(s -> s + "!").toList();
+    List<String> eyes = words.stream().map(s -> s.replace("i", "eye")).toList();
+    List<String> loud = words.stream().map(String::toUpperCase).toList();
+
   }
 
 
@@ -132,6 +135,7 @@ public class Outline {
     question1();
     question2();
     question3();
+    question4();
 
   }
 }
