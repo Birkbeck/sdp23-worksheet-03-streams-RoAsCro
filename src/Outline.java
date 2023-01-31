@@ -85,10 +85,10 @@ public class Outline {
     List<String> words = getList();
     System.out.println("5a:");
     List<String> smallLoudAndE = words.stream().filter(s -> s.length() < 4).filter(s -> s.contains("e")).map(s -> s.toUpperCase()).toList();
-    System.out.println(smallLoudAndE);
+    System.out.println(smallLoudAndE.get(0));
     System.out.println("5b: ");
     List<String> smallLoudAndQ = words.stream().filter(s -> s.length() < 4).filter(s -> s.contains("q")).map(s -> s.toUpperCase()).toList();
-    System.out.println(smallLoudAndQ);
+    System.out.println(smallLoudAndQ.get(0));
   }
 
 
