@@ -100,7 +100,12 @@ public class Outline {
   public static void question6() {
     List<String> words = getList();
     System.out.println("6:");
-    // YOUR CODE
+    Stream<String> eStream = words.stream().filter(s -> s.length() < 4).filter(s -> s.contains("e")).map(s -> {
+      System.out.println(s);
+      return s.toUpperCase();
+    });
+    System.out.println("If the operation is not lazy, it will have printed already!");
+    List<String> smallLoudAndE = eStream.toList();
   }
 
   // (*) Produce a single String that is the result of concatenating the
@@ -146,5 +151,6 @@ public class Outline {
     question3();
     question4();
     question5();
+    question6();
   }
 }
