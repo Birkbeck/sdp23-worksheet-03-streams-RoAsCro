@@ -11,12 +11,18 @@ public class Outline {
             "beaver", "winterland", "elephant", "eye", "qi");
   }
 
+  public static void print(List<String> wordList, String separator) {
+    for (String s : wordList) {
+      System.out.print(s + separator);
+    }
+  }
+
   // Loop through the words and print each one on a separate line,
   // with two spaces in front of each word.
   public static void question1() {
     List<String> words = getList();
     System.out.println("1: ");
-    // YOUR CODE
+    print(words, "  \n");
   }
 
   // Repeat this problem but without two spaces in front of each word.
