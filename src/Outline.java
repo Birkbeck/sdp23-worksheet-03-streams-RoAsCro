@@ -31,7 +31,7 @@ public class Outline {
   public static void question2() {
     List<String> words = getList();
     System.out.println("2: ");
-    // YOUR CODE
+    print(words, "\n");
   }
 
   // For each of the following lambda expressions (see Question 5 in Worksheet 2),
@@ -126,6 +126,7 @@ public class Outline {
 
   public static void main(String... args) { // varargs alternative to String[]
     question1();
+    question2();
 
   }
 }
