@@ -117,7 +117,7 @@ public class Outline {
   public static void question7() {
     List<String> words = getList();
     System.out.println("7:");
-    List<String> loudAndFast = words.stream().map(s -> s.toUpperCase()).reduce((s1, s2) -> s1 + s2).stream().toList();
+    String loudAndFast = words.stream().map(s -> s.toUpperCase()).reduce((s1, s2) -> s1 + s2).stream().toList().get(0);
     System.out.println(loudAndFast);
   }
 
@@ -130,7 +130,9 @@ public class Outline {
   public static void question8() {
     List<String> words = getList();
     System.out.println("8:");
-    // YOUR CODE
+    String loudAndFast = words.stream().reduce((s1, s2) -> s1.toUpperCase() + s2.toUpperCase()).stream().toList().get(0);
+    System.out.println(loudAndFast);
+
   }
 
   // (*) Produce a String that is all the words concatenated together, but
@@ -154,5 +156,6 @@ public class Outline {
     question5();
     question6();
     question7();
+    question8();
   }
 }
