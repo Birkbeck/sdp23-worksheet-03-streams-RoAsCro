@@ -117,7 +117,8 @@ public class Outline {
   public static void question7() {
     List<String> words = getList();
     System.out.println("7:");
-    // YOUR CODE
+    List<String> loudAndFast = words.stream().map(s -> s.toUpperCase()).reduce((s1, s2) -> s1 + s2).stream().toList();
+    System.out.println(loudAndFast);
   }
 
 
@@ -152,5 +153,6 @@ public class Outline {
     question4();
     question5();
     question6();
+    question7();
   }
 }
