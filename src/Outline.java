@@ -45,7 +45,11 @@ public class Outline {
   public static void question3() {
     List<String> words = getList();
     System.out.println("3:");
-    // YOUR CODE
+    List<String> lessThan4 = words.stream().filter(s -> s.length() < 4).toList();
+    List<String> containsB = words.stream().filter(s -> s.contains("b")).toList();
+    List<String> evenLength = words.stream().filter(s -> (s.length() % 2) == 0).toList();
+
+
   }
 
 
@@ -127,6 +131,7 @@ public class Outline {
   public static void main(String... args) { // varargs alternative to String[]
     question1();
     question2();
+    question3();
 
   }
 }
