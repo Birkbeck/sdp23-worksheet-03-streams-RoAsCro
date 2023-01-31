@@ -48,6 +48,9 @@ public class Outline {
     List<String> lessThan4 = words.stream().filter(s -> s.length() < 4).toList();
     List<String> containsB = words.stream().filter(s -> s.contains("b")).toList();
     List<String> evenLength = words.stream().filter(s -> (s.length() % 2) == 0).toList();
+    System.out.println(lessThan4);
+    System.out.println(containsB);
+    System.out.println(evenLength);
 
 
   }
@@ -67,7 +70,9 @@ public class Outline {
     List<String> exclamatory = words.stream().map(s -> s + "!").toList();
     List<String> eyes = words.stream().map(s -> s.replace("i", "eye")).toList();
     List<String> loud = words.stream().map(String::toUpperCase).toList();
-
+    System.out.println(exclamatory);
+    System.out.println(eyes);
+    System.out.println(loud);
   }
 
 
@@ -79,7 +84,11 @@ public class Outline {
   public static void question5() {
     List<String> words = getList();
     System.out.println("5a:");
-    // YOUR CODE
+    List<String> smallLoudAndE = words.stream().filter(s -> s.length() < 4).filter(s -> s.contains("e")).map(s -> s.toUpperCase()).toList();
+    System.out.println(smallLoudAndE);
+    System.out.println("5b: ");
+    List<String> smallLoudAndQ = words.stream().filter(s -> s.length() < 4).filter(s -> s.contains("q")).map(s -> s.toUpperCase()).toList();
+    System.out.println(smallLoudAndQ);
   }
 
 
@@ -136,6 +145,6 @@ public class Outline {
     question2();
     question3();
     question4();
-
+    question5();
   }
 }
