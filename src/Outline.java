@@ -143,7 +143,8 @@ public class Outline {
   public static void question9() {
     List<String> words = getList();
     System.out.println("9:");
-    // YOUR CODE
+    String fastCommas = words.stream().reduce((s1, s2) -> s1 + "," + s2).stream().toList().get(0);
+    System.out.println(fastCommas);
   }
 
   // CONTINUE WITH THE REST OF THE QUESTIONS
@@ -157,5 +158,6 @@ public class Outline {
     question6();
     question7();
     question8();
+    question9();
   }
 }
